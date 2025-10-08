@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cat Corner: All About Felines</title>
+    <!-- Importing the 'Inter' font for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /*
+        * Global Resets and Base Styles
+        */
+        :root {
+            --primary-color: #192028; /* Slate Blue */
+            --secondary-color: #366e1c; /* Light Gray Blue */
+            --background-light: #f4f6f9; /* Off White/Light Gray */
+            --background-dark: #2c3e50; /* Dark Navy */
+            --text-dark: #2c3e50;
+            --text-light: #f4f6f9;
+            --accent-color: #e74c3c; /* Reddish Accent */
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /*
+        * Layout and Container
+        */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /*
+        * Header Styling
+        */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /*
+        * Section Styling
+        */
+        section {
+            padding: 40px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /*
+        * Fact Cards Styling
+        */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .fact-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+
+        /*
+        * Gallery Styling
+        */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            transition: opacity 0.3s ease;
+            display: block;
+        }
+
+        .gallery-item img:hover {
+            opacity: 0.85;
+            cursor: pointer;
+        }
+
+        /*
+        * Footer Styling
+        */
+        footer {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+
+
+    <main class="container">
+        <!-- Introduction Section -->
+        <section id="home">
+            <h2>Why Cats Are Amazing</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                Felines, from the domestic house cat to the mighty lion, are creatures of grace, mystery, and comfort. They have been companions to humans for millennia, providing cuddles, amusement, and a quiet, judging presence. This site is dedicated to celebrating the majesty of *Felis catus*.
+            </p>
+            <p style="text-align: center; font-weight: bold;">
+                Scroll down to learn fun facts and see some adorable cat pictures!
+            </p>
+        </section>
+
+        <!-- Facts Section -->
+        <section id="facts">
+            <h2>Amazing Cat Facts</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <h3>Sleep Masters</h3>
+                    <p>Cats spend approximately 70% of their lives asleep. That's about 16 hours a day dedicated to napping and dreaming of mice.</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Unique Noses</h3>
+                    <p>A cat's nose pad is unique, much like a human fingerprint. No two cats have the exact same pattern!</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Supersonic Hearing</h3>
+                    <p>Cats can hear frequencies up to 64 kHz, which is significantly higher than humans (20 kHz) and even dogs (45 kHz).</p>
+                </div>
+                <div class="fact-card">
+                    <h3>Liquid Bodies</h3>
+                    <p>Due to their highly flexible skeletons, cats can squeeze into nearly any container, leading to the popular theory that they are liquid.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <!-- Placeholder images using placehold.co -->
+                    <img src="https://placehold.co/400x250/5d6d7e/ffffff?text=plz+dont+read+it" alt="Fluffy Cat">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x250/aeb6bf/2c3e50?text=why u reading this" alt="Tiny Kitten">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x250/e74c3c/ffffff?text=Stop+Lying+I+know+you've+seen+a+cat+before" alt="Cat Napping">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x250/2c3e50/aeb6bf?text=Majestic+Feline" alt="No+cat+pics+for+you">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>
