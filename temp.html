@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cat Corner: All About Felines</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Customizing Tailwind's default font to use 'Inter'
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-slate-100 text-slate-800 leading-relaxed">
+
+    <header class="bg-slate-900 text-slate-100 shadow-md sticky top-0 z-40">
+        <div class="container mx-auto max-w-6xl p-5 flex justify-between items-center">
+            <h1 class="text-3xl font-bold tracking-wide">
+                The Cat Corner
+            </h1>
+            
+            <button id="menu-btn" class="text-slate-100 md:hidden z-50 p-2">
+                <span class="sr-only">Open Menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+
+            <nav id="mobile-menu" 
+                 class="hidden md:flex md:items-center space-y-4 md:space-y-0 md:space-x-6
+                        absolute md:static top-0 left-0 
+                        w-full md:w-auto 
+                        bg-slate-900 md:bg-transparent 
+                        p-5 md:p-0 pt-24 md:pt-0
+                        h-screen md:h-auto
+                        transition-all duration-300">
+                <a href="#home" class="block text-lg md:text-base text-slate-100 font-medium transition-colors hover:text-red-500">Home</a>
+                <a href="#facts" class="block text-lg md:text-base text-slate-100 font-medium transition-colors hover:text-red-500">Facts</a>
+                <a href="#gallery" class="block text-lg md:text-base text-slate-100 font-medium transition-colors hover:text-red-500">Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto max-w-6xl p-5">
+        
+        <section id="home" class="py-10 mb-5 border-b border-green-800">
+            <h2 class="text-3xl text-slate-900 text-center font-bold mb-8">
+                <span class="inline-block border-b-4 border-red-500 pb-2">Why Cats Are Amazing</span>
+            </h2>
+            
+            <p class="text-center max-w-3xl mx-auto mb-8">
+                Felines, from the domestic house cat to the mighty lion, are creatures of grace, mystery, and comfort. They have been companions to humans for millennia, providing cuddles, amusement, and a quiet, judging presence. This site is dedicated to celebrating the majesty of <i>Felis catus</i>.
+            </p>
+            <p class="text-center font-bold">
+                Scroll down to learn fun facts and see some adorable cat pictures!
+            </p>
+        </section>
+
+        <section id="fact-button-section" class="py-16 text-center rounded-xl bg-slate-200 my-10">
+            <div class="container mx-auto max-w-6xl px-5">
+                <h2 class="text-3xl text-slate-900 font-bold mb-6">
+                    Want to Learn More?
+                </h2>
+                <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-8">
+                    Cats are full of surprises. Click the button below to get a random interesting fact about our feline friends!
+                </p>
+                <button id="fact-btn" 
+                        class="bg-red-500 text-white font-bold 
+                               py-4 px-10 text-xl rounded-xl 
+                               shadow-lg hover:bg-red-600 
+                               transition-transform duration-200 hover:scale-105">
+                    Get a Random Cat Fact!
+                </button>
+            </div>
+        </section>
+
+
+        <section id="facts" class="py-10 mb-5 border-b border-green-800">
+            <h2 class="text-3xl text-slate-900 text-center font-bold mb-8">
+                <span class="inline-block border-b-4 border-red-500 pb-2">Amazing Cat Facts</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="fact-card bg-white p-6 rounded-xl shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <h3 class="text-red-500 mt-0 text-xl font-bold mb-2">Sleep Masters</h3>
+                    <p>Cats spend approximately 70% of their lives asleep. That's about 16 hours a day dedicated to napping and dreaming of mice.</p>
+                </div>
+                <div class="fact-card bg-white p-6 rounded-xl shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <h3 class="text-red-500 mt-0 text-xl font-bold mb-2">Unique Noses</h3>
+                    <p>A cat's nose pad is unique, much like a human fingerprint. No two cats have the exact same pattern!</p>
+                </div>
+                <div class="fact-card bg-white p-6 rounded-xl shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <h3 class="text-red-500 mt-0 text-xl font-bold mb-2">Supersonic Hearing</h3>
+                    <p>Cats can hear frequencies up to 64 kHz, which is significantly higher than humans (20 kHz) and even dogs (45 kHz).</p>
+                </div>
+                <div class="fact-card bg-white p-6 rounded-xl shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <h3 class="text-red-500 mt-0 text-xl font-bold mb-2">Liquid Bodies</h3>
+                    <p>Due to their highly flexible skeletons, cats can squeeze into nearly any container, leading to the popular theory that they are liquid.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-10"> <h2 class="text-3xl text-slate-900 text-center font-bold mb-8">
+                <span class="inline-block border-b-4 border-red-500 pb-2">Photo Gallery</span>
+            </h2>
+            
+            <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x250/5d6d7e/ffffff?text=plz+dont+read+it" alt="Fluffy Cat" class="gallery-img w-full h-64 object-cover rounded-xl transition-opacity duration-300 hover:opacity-80 cursor-pointer">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x250/aeb6bf/2c3e50?text=why u reading this" alt="Tiny Kitten" class="gallery-img w-full h-64 object-cover rounded-xl transition-opacity duration-300 hover:opacity-80 cursor-pointer">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x250/e74c3c/ffffff?text=Stop+Lying+I+know+you've+seen+a+cat+before" alt="Cat Napping" class="gallery-img w-full h-64 object-cover rounded-xl transition-opacity duration-300 hover:opacity-80 cursor-pointer">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x250/2c3e50/aeb6bf?text=Majestic+Feline" alt="No+cat+pics+for+you" class="gallery-img w-full h-64 object-cover rounded-xl transition-opacity duration-300 hover:opacity-80 cursor-pointer">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-100 text-center py-8 mt-10">
+        <p>&copy; 2025 The Cat Corner. All rights reserved.</p>
+    </footer>
+
+    <div id="modal-backdrop" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50"></div>
+    <div id="modal-container" class="fixed inset-0 flex items-center justify-center p-4 hidden z-50">
+        <div class="relative bg-white p-2 rounded-lg shadow-xl">
+            <button id="modal-close-btn" class="absolute -top-4 -right-4 bg-white text-black rounded-full w-8 h-8 font-bold text-lg">&times;</button>
+            <img id="modal-img" src="" alt="Enlarged gallery image" class="max-w-[80vw] max-h-[80vh] object-contain">
+        </div>
+    </div>
+
+    <div id="fact-backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+    <div id="fact-modal" class="fixed top-20 left-1/2 -translate-x-1/2 w-11/12 max-w-lg 
+                               bg-white p-6 rounded-xl shadow-2xl z-50 
+                               hidden transition-all duration-300">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold text-slate-900">Did You Know?</h3>
+            <button id="fact-close-btn" class="text-gray-500 hover:text-gray-900 text-3xl font-bold leading-none">&times;</button>
+        </div>
+        <p id="fact-text" class="text-lg text-slate-700">A random cat fact will appear here!</p>
+    </div>
+
+
+    <script>
+        // --- NEW: Cat Facts Array ---
+        const catFacts = [
+            "A group of cats is called a 'clowder.'",
+            "Cats spend about 70% of their lives sleeping, which is roughly 13-16 hours a day.",
+            "A cat's purr vibrates at a frequency of 25 to 150 Hertz, which is the same frequency range at which muscles and bones can repair themselves.",
+            "Domestic cats share 95.6% of their genetic makeup with tigers.",
+            "Cats cannot taste sweet flavors. They lack the specific taste receptor for sweetness.",
+            "A house cat can run at speeds of up to 30 mph (48 km/h) over short distances.",
+            "The oldest known pet cat was found in a 9,500-year-old grave on the island of Cyprus.",
+            "The technical term for a cat hairball is a 'bezoar.'",
+            "A cat has 32 muscles in each ear, allowing them to rotate their ears 180 degrees independently.",
+            "Cats' 'meows' are a form of communication developed almost exclusively to interact with humans. They rarely meow at other cats.",
+            "A cat's nose pad is ridged with a unique pattern, just like a human fingerprint.",
+            "Cats have whiskers on the backs of their front legs, which help them navigate and hunt.",
+            "When cats rub against you, they are marking you as their territory with scent glands located on their face, paws, and tail.",
+            "Cats are crepuscular, meaning they are most active at dawn and dusk.",
+            "Sir Isaac Newton is credited with inventing the cat flap, or cat door.",
+            "The oldest cat ever recorded was Creme Puff, who lived to be 38 years and 3 days old.",
+            "In ancient Egypt, killing a cat, even accidentally, was a crime punishable by death.",
+            "When an ancient Egyptian's pet cat died, the family members would shave off their eyebrows as a sign of mourning.",
+            "A cat can jump up to six times its own height.",
+            "Cats are farsighted, meaning they can't see objects clearly that are very close to their face.",
+            "Cats have a third eyelid, called a nictitating membrane, which helps protect their eyes and keep them moist.",
+            "Most female cats are right-pawed, while most male cats are left-pawed.",
+            "Cats' collarbones are not attached to their other bones, which allows them to fit through any opening the size of their head.",
+            "A cat's jaw can only move up and down, not side to side, which is why they cannot chew large pieces of food.",
+            "Cats have an extra organ called the Jacobson's organ (or vomeronasal organ) in the roof of their mouth that allows them to 'taste' scents. This is why they make a 'flehmen' grimace.",
+            "Polydactyl cats, or 'Hemingway cats,' have extra toes. They are common in Boston and Key West, Florida.",
+            "Most adult cats are lactose intolerant, so giving them a saucer of milk is not a good idea.",
+            "A cat's heart beats about twice as fast as a human heart, at 110 to 140 beats per minute.",
+            "Cats have excellent night vision and can see at light levels six times lower than what a human needs.",
+            "A cat in Talkeetna, Alaska, named Stubbs, was the honorary mayor for 20 years.",
+            "Cats use their whiskers to determine if they can fit through a space. The whiskers are roughly as wide as their body.",
+            "The first cat in space was a French cat named Félicette, or 'Astrocat,' who went on a sub-orbital flight in 1963 and survived.",
+            "Cats only sweat through their paw pads.",
+            "A female cat can become pregnant at just 4 months of age.",
+            "Cats have about 100 different vocalizations, whereas dogs only have about 10.",
+            "The world's richest cat, Blackie, inherited a fortune of £7 million ($12.5 million) from his millionaire owner.",
+            "Cats can't climb down trees head-first. Their claws are curved in one direction, so they must back down.",
+            "The original 'kitty litter' was invented in 1947 by Edward Lowe, who suggested using absorbent clay (fuller's earth) instead of sand.",
+            "Cats' brains are structurally very similar to human brains. The regions responsible for emotion are nearly identical.",
+            "A cat's cerebral cortex has about 300 million neurons, compared to a dog's 160 million.",
+            "Cats spend 30-50% of their waking hours grooming themselves.",
+            "Grooming helps cats cool down, stimulate blood flow, and distribute natural oils.",
+            "A group of kittens is called a 'kindle.'",
+            "The Egyptian Mau is the oldest domesticated cat breed and is naturally spotted.",
+            "The world's smallest cat breed is the Singapura, which weighs as little as 4 lbs (1.8 kg).",
+            "The largest domestic cat breed is the Maine Coon, which can weigh up to 25 lbs (11.3 kg).",
+            "Cats' kidneys are so efficient they can rehydrate by drinking seawater.",
+            "When a cat slowly blinks at you, it's considered a 'cat kiss' and a sign of trust and affection.",
+            "The 'M' marking on the forehead of many tabby cats is the subject of several legends, including one that a tabby comforted the baby Jesus.",
+            "A cat can recognize its owner's voice but often chooses to ignore it."
+        ];
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Mobile Menu Toggle ---
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuBtn.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
+                } else {
+                    menuBtn.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+                }
+            });
+            
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuBtn.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
+                });
+            });
+
+
+            // --- Image Modal Logic ---
+            const backdrop = document.getElementById('modal-backdrop');
+            const modalContainer = document.getElementById('modal-container');
+            const modalImg = document.getElementById('modal-img');
+            const closeBtn = document.getElementById('modal-close-btn');
+            const galleryImages = document.querySelectorAll('.gallery-img');
+
+            const openModal = (src) => {
+                modalImg.src = src;
+                backdrop.classList.remove('hidden');
+                modalContainer.classList.remove('hidden');
+            };
+
+            const closeModal = () => {
+                backdrop.classList.add('hidden');
+                modalContainer.classList.add('hidden');
+            };
+
+            galleryImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    openModal(img.src);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+
+
+            // --- NEW: Cat Fact Modal Logic ---
+            const factBtn = document.getElementById('fact-btn');
+            const factModal = document.getElementById('fact-modal');
+            const factBackdrop = document.getElementById('fact-backdrop');
+            const factText = document.getElementById('fact-text');
+            const factCloseBtn = document.getElementById('fact-close-btn');
+
+            const openFactModal = () => {
+                // 1. Get random fact
+                const randomIndex = Math.floor(Math.random() * catFacts.length);
+                const randomFact = catFacts[randomIndex];
+                
+                // 2. Set text
+                factText.textContent = randomFact;
+                
+                // 3. Show modal and backdrop
+                factModal.classList.remove('hidden');
+                factBackdrop.classList.remove('hidden');
+            };
+
+            const closeFactModal = () => {
+                factModal.classList.add('hidden');
+                factBackdrop.classList.add('hidden');
+            };
+
+            // Add event listeners for the fact modal
+            if (factBtn) { // Check if the button exists before adding listener
+                factBtn.addEventListener('click', openFactModal);
+            }
+            factCloseBtn.addEventListener('click', closeFactModal);
+            factBackdrop.addEventListener('click', closeFactModal);
+        });
+    </script>
+
+</body>
+</html>
